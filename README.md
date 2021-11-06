@@ -7,10 +7,10 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 
 ## Fundamentos da Programação
 - [Decisão](Faculdade/Fundamentos/Decisão) <br />
-- Repetição  <br />
-- Sequencial  <br />
-- Matrizes <br />
-- Strings <br />
+- [Repetição](Faculdade/Fundamentos/Repetição)  <br />
+- [Sequencial](Faculdade/Fundamentos/Sequencial) <br />
+- [Matrizes](Faculdade/Fundamentos/Matrizes) <br />
+- [String](Faculdade/Fundamentos/String) <br />
 
 ## Algoritmo e Estrutura de Dados
 - Structs <br />

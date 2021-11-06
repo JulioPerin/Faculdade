@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1634323260 source:c:\users\julio\onedrive\documentos\git\algoritmo e estrutura\tad\aula_lista\main.c
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<stdlib.h>
+	"lista.h"
+	"lista.c"
+
+1634235422 c:\users\julio\onedrive\documentos\git\algoritmo e estrutura\tad\aula_lista\lista.h
+
+1634236045 c:\users\julio\onedrive\documentos\git\algoritmo e estrutura\tad\aula_lista\lista.c
+	<stdio.h>
+	<stdlib.h>
+	"lista.h"
+

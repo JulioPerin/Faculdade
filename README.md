@@ -6,7 +6,7 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 
 
 ## Fundamentos da Programação
-- Decisão  <br />
+- [Decisão](Faculdade/Fundamentos/Decisão) <br />
 - Repetição  <br />
 - Sequencial  <br />
 - Matrizes <br />

@@ -14,12 +14,12 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 - [Estruturas Homogêneas](Faculdade/Fundamentos/Homogeneas)
 
 ## Algoritmo e Estrutura de Dados
-- [Structs](Faculdade/Algoritmo/Structs) <br />
-- Ponteiros <br />
-- Ponteiros em structs <br />
-- Alocação dinâmica <br />
-- TAD <br />
-- Listas, filas e pilhas <br />
+- [Structs](Faculdade/Algoritmo/Struct) <br />
+- [Ponteiros](Faculdade/Algoritmo/Ponteiros) <br />
+- [Ponteiros em structs](Faculdade/Algoritmo/Ponteiros em structs) <br />
+- [Alocação dinâmica](Faculdade/Algoritmo/Alocação dinâmica) <br />
+- [TAD](Faculdade/Algoritmo/TAD) <br />
+- [Listas, filas e pilhas] <br />
 - Listas, filas e pilhas encadeadas <br />
 - Recursividade <br />
 - Algoritmos de busca <br />

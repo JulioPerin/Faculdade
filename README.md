@@ -11,6 +11,7 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 - [Sequencial](Faculdade/Fundamentos/Sequencial) <br />
 - [Matrizes](Faculdade/Fundamentos/Matrizes) <br />
 - [String](Faculdade/Fundamentos/String) <br />
+- [Estruturas Homogêneas](Faculdade/Fundamentos/Homogeneas)
 
 ## Algoritmo e Estrutura de Dados
 - Structs <br />

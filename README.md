@@ -14,7 +14,7 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 - [Estruturas Homogêneas](Faculdade/Fundamentos/Homogeneas)
 
 ## Algoritmo e Estrutura de Dados
-- Structs <br />
+- [Structs](Faculdade/Algoritmo/Structs) <br />
 - Ponteiros <br />
 - Ponteiros em structs <br />
 - Alocação dinâmica <br />

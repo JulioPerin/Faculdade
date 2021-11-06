@@ -16,8 +16,8 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 ## Algoritmo e Estrutura de Dados
 - [Structs](Faculdade/Algoritmo/Struct) <br />
 - [Ponteiros](Faculdade/Algoritmo/Ponteiros) <br />
-- [Ponteiros em structs](Faculdade/Algoritmo/Ponteiros em structs) <br />
-- [Alocação dinâmica](Faculdade/Algoritmo/Alocação dinâmica) <br />
+- [Ponteiros em structs](Faculdade/Algoritmo/PemStructs) <br />
+- [Alocação dinâmica](Faculdade/Algoritmo/AlocaçãoDinâmica) <br />
 - [TAD](Faculdade/Algoritmo/TAD) <br />
 - [Listas, filas e pilhas] <br />
 - Listas, filas e pilhas encadeadas <br />

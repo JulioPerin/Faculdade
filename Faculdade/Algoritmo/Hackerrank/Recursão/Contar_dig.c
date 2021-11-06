@@ -1,24 +1,19 @@
 #include <stdio.h>
 
-
 int conta_digitos(int n, int num){
-
-    if(n<=0 && n>9)
+    if((n<0) || (n>9))
         return 0;
-
-    else if(num%10 == n)
-        return (1+conta_digitos(n, num/10));
+    else if ((num >= 0) && (num <= 9))
+        return (num == n);
     else
-        return conta_digitos(n, num/10);
-
-
+        return ((num % 10) == n) + conta_digitos(n, num / 10);
 }
 
 int main(void)
 {
-    int a=3, b=3304353;
+    int a, b;
 
-    //scanf("%d %d", &a &b)
+    scanf("%d %d", &a, &b);
 
     printf("%d", conta_digitos(a, b));
 }

@@ -10,7 +10,7 @@ struct Cell{
               // tipo de informação, recomendo o uso de ponteiro
               // genérico. Exemplo: void* item;
     Cell *next;
-};
+}Cell;
 
 
 // Estrutura para representar listas encadeadas

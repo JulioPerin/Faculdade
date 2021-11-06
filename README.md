@@ -19,10 +19,10 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 - [Ponteiros em structs](Faculdade/Algoritmo/PemStructs) <br />
 - [Alocação dinâmica](Faculdade/Algoritmo/AlocaçãoDinâmica) <br />
 - [TAD](Faculdade/Algoritmo/TAD) <br />
-- [Listas, filas e pilhas] <br />
-- Listas, filas e pilhas encadeadas <br />
-- Recursividade <br />
-- Algoritmos de busca <br />
+- [Listas, filas e pilhas](Faculdade/Algoritmo/LPF) <br />
+- [Listas, filas e pilhas encadeadas](Faculdade/Algoritmo/LPFE) <br />
+- [Recursividade](Faculdade/Algoritmo/Recursão) <br />
+- [Algoritmos de busca](Faculdade/Algoritmo/) <br />
 - Algoritmos de ordenação <br />
 - Complexidade de Algoritmos <br />
 - Matrizes esparsas <br />

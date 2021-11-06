@@ -22,11 +22,11 @@ Este repositório está sendo escrito por um aluno do Curso de Engenharia da Com
 - [Listas, filas e pilhas](Faculdade/Algoritmo/LPF) <br />
 - [Listas, filas e pilhas encadeadas](Faculdade/Algoritmo/LPFE) <br />
 - [Recursividade](Faculdade/Algoritmo/Recursão) <br />
-- [Algoritmos de busca](Faculdade/Algoritmo/) <br />
-- [Algoritmos de ordenação](Faculdade/Algoritmo/) <br />
+- [Algoritmos de busca](Faculdade/Algoritmo/Busca) <br />
+- [Algoritmos de ordenação](Faculdade/Algoritmo/Ordenação) <br />
 - [Complexidade de Algoritmos](Faculdade/Algoritmo/) <br />
-- [Matrizes esparsas](Faculdade/Algoritmo/) <br />
-- [Hashing](Faculdade/Algoritmo/) <br />
+- [Matrizes esparsas](Faculdade/Algoritmo/MatrizesEsparsas) <br />
+- [Hashing](Faculdade/Algoritmo/Hashing) <br />
 
 # Autor
 

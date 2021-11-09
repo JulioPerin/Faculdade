@@ -1,3 +1,15 @@
+/*
+Implemente uma função que receba 3 listas estáticas (l1, l2, l3). A função deve concatenar l1 e l2,
+de forma que ambas sejam invertidas, em l3. Durante a concatenação, as listas l1 e l2 devem ser esvaziadas.
+
+Input Format:
+Na primeira linha, enquanto "-1" não for lido, ler números inteiros. Na segunda linha, a mesma restrição da primeira linha deve ser aplicada.
+
+Output Format:
+Imprimir a lista concatenada.
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

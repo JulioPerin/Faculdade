@@ -1,3 +1,21 @@
+/*
+Dada uma expressão qualquer com parênteses, indique se a quantidade de parênteses está correta ou não,
+sem levar em conta o restante da expressão
+
+Input Format:
+Deve ser lido um valor inteiro N que representa a quantidade de casos de teste. Cada linha a seguir é uma expressões,
+cada uma delas com até 100 caracteres.
+
+Constraints:
+As pilhas devem ser manipuladas apenas por funções. Por exemplo, o acesso a elementos deve ser feito apenas através da função desempilhar.
+
+Output Format:
+O arquivo de saída deverá ter a quantidade de linhas correspondente ao arquivo de entrada,
+cada uma delas contendo as palavras correct ou incorrect de acordo com as regras acima fornecidas.
+
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -173,7 +191,7 @@ int balanco_parenteses(char string[])
 
 int main()
 {
-     /*char string[20];
+     char string[20];
      int i, a;
 
      scanf("%d", &a);
@@ -183,25 +201,7 @@ int main()
          scanf("%s", string);
          setbuf(stdin, NULL);
          balanco_parenteses(string);
-     }*/
+     }
 
-    Pilha *p = criar_pilha(p);
-
-    empilhar(p, 'e');
-    empilhar(p, 'a');
-    empilhar(p, 'b');
-    empilhar(p, 'u');
-    empilhar(p, 'a');
-    empilhar(p, 'c');
-    desempilhar(p);
-    desempilhar(p);
-    empilhar(p, desempilhar(p));
-    desempilhar(p);
-    empilhar(p, 'b');
-    desempilhar(p);
-    empilhar(p, (char) empilhar(p,(char)(empilhar(p,'s')-1)));
-
-    imprimir_pilha(p);
-
-
+    return 0;
 }

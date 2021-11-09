@@ -1,3 +1,19 @@
+/*
+Implemente uma função que receba duas filas estáticas compostas por números naturais,
+cujos elementos estejam ordenados de forma crescente. A função deverá concatenar as
+duas filas, onde a fila resultante deverá conter os seus elementos ordenados de forma crescente.
+
+Input Format:
+Na primeira linha, enquanto "-1" não for lido, ler números inteiros. Na segunda linha, a mesma restrição da primeira linha deve ser aplicada.
+
+Constraints:
+As filas devem ser manipuladas apenas por funções. Por exemplo, o acesso a elementos deve ser feito apenas através da função desenfileirar.
+
+Output Format:
+Imprimir a fila concatenada
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #define TAM_MAX 100

@@ -1,3 +1,12 @@
+/* A função deverá retornar um vetor resultante da soma entre v1 e v2.
+
+Input Format:
+Na primeira linha deverão ser lidos os campos referentes ao v1 (x e y).
+Na segunda linha deverão ser lidos os campos referentes ao v2.
+
+Output Format:
+Imprimir o vetor resultante da soma entre v1 e v2.*/
+
 #include <stdio.h>
 #include <math.h>
 

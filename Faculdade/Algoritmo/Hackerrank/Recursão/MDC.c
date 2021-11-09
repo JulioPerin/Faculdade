@@ -1,3 +1,13 @@
+/*
+Implemente uma função recursiva que calcule o máximo divisor comum entre dois números inteiros:
+
+Input Format:
+Na primeira linha devem ser lidos dois números inteiros.
+
+Output Format:
+Imprimir o máximo divisor comum entre os dois números.
+*/
+
 #include <stdio.h>
 
 int mdc(int a, int b)

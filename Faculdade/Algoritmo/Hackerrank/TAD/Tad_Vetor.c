@@ -1,3 +1,18 @@
+/*
+Crie um TAD para processamento de vetores, onde v é o vetor e n é a quantidade de elementos contidos no vetor:
+
+Input Format:
+Deve ser lido um valor inteiro n que representa a quantidade de elementos de um v.
+Em seguida, devem ser lidos os n elementos do vetor. Repetir o processo para o
+segundo vetor. Por fim, na última linha devem ser lidas as posições ini e fim para
+geração de um subvetor a partir do primeiro vetor que foi lido.
+
+Output Format:
+Vetores na seguinte ordem: resultantes da intercalação, resultantes da concatenação e subvetor.
+
+
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>

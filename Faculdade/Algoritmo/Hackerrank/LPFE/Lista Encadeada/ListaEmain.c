@@ -1,3 +1,13 @@
+/*
+Implemente uma função que receba uma lista encadeada. A função deverá inverter a lista recebida como entrada.
+
+Input Format:
+Enquanto -1 não for lido, ler números inteiros.
+
+Output Format:
+Imprimir a lista invertida.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -176,7 +186,7 @@ int tamanho_LE(ListaE *l){
     return tam;
 }
 
-int inverter(ListaE *l)
+int inverter(ListaE *l, Cell *c)
 {
     int i;
     ListaE *r1 = criar_listaE();
@@ -184,8 +194,11 @@ int inverter(ListaE *l)
 
     for(i=0; i<tamanho_LE(l); i++)
     {
-        inserir_ultimo(c->key, r1);
+        inserir_primeiro(c->item, r1);
+        remover(i, l);
+
     }
+    imprimir(r1);
 
 
 }
@@ -194,10 +207,7 @@ int main()
 {
     int a;
     ListaE *l = criar_listaE();
-    Cell *c = criar_celula(1);
-
-     ListaE *r1 = criar_listaE();
-    Cell *r = criar_celula(1);
+    Cell *c = criar_celula(0);
 
     /*do
     {
@@ -215,8 +225,8 @@ int main()
     inserir_ultimo(5, l);
     inserir_ultimo(6, l);
 
-    inserir_ultimo(Cell->key, r1);
+    inverter(l, c);
 
-    imprimir(r1);
 
+    return 0;
 }

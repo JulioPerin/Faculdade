@@ -186,46 +186,50 @@ int tamanho_LE(ListaE *l){
     return tam;
 }
 
-int inverter(ListaE *l, Cell *c)
+void inverter(ListaE *l)
 {
-    int i;
-    ListaE *r1 = criar_listaE();
-    Cell *r = criar_celula(1);
+    Cell *aux;
+    Cell *inv = NULL;
 
-    for(i=0; i<tamanho_LE(l); i++)
+    if (!listaE_vazia(l))
     {
-        inserir_primeiro(c->item, r1);
-        remover(i, l);
+        while (l->head != NULL)
+        {
+            aux = l->head;
+            l->head = aux->next;
+            aux->next = inv;
+            inv = aux;
+        }
 
+        l->head = inv;
     }
-    imprimir(r1);
-
-
+    imprimir(l);
 }
 
 int main()
 {
     int a;
     ListaE *l = criar_listaE();
-    Cell *c = criar_celula(0);
 
-    /*do
+    do
     {
+        scanf("%d", &a);
         if(a != -1)
         {
-            inserir_ultimo, l);
+            inserir_ultimo(a, l);
         }
 
-    }while(a != -1);*/
+    }while(a != -1);
 
-    inserir_ultimo(1, l);
+    /*inserir_ultimo(1, l);
     inserir_ultimo(2, l);
     inserir_ultimo(3, l);
     inserir_ultimo(4, l);
     inserir_ultimo(5, l);
-    inserir_ultimo(6, l);
+    inserir_ultimo(6, l);*/
 
-    inverter(l, c);
+    inverter(l);
+
 
 
     return 0;

@@ -106,7 +106,7 @@ void imprimir_fila(FilaE* f){
         aux = f->inicio;
 
         while (aux != NULL){
-            printf("%d\n", aux->item);
+            printf("%d ", aux->item);
             aux = aux->next;
         }
     }
@@ -126,20 +126,36 @@ int liberar_filaE(FilaE* f){
     return 0;
 }
 
+int inicio_fila(FilaE *f){
+    Cell *aux;
+    aux = f->inicio;
+
+    return aux->item;
+}
+
 int gerenciar_estacionamento(FilaE *f, int a)
 {
-    Cell *aux;
     int cont=0;
 
     if(!filaE_vazia(f))
     {
-        aux = f->inicio;
-        while(aux->item != a)
+        if(inicio_fila(f) == a)
         {
-            enfileirar(aux->item, f);
+            imprimir_fila(f);
+            printf("\n0\n");
+            printf("sucesso");
+            return 0;
+        }
+
+        while(inicio_fila(f) != a)
+        {
+                enfileirar(inicio_fila(f), f);
+                desenfileirar(f);
+                cont++;
+        }
+        if(inicio_fila(f) == a)
+        {
             desenfileirar(f);
-            aux = aux->next;
-            cont++;
         }
     }
     else
@@ -148,6 +164,8 @@ int gerenciar_estacionamento(FilaE *f, int a)
     }
 
     imprimir_fila(f);
+    printf("\n%d\n", cont);
+    printf("sucesso");
     return cont;
 
 }
@@ -157,7 +175,6 @@ int main()
     int a;
     FilaE *f = criar_filaE();
 
-   /*
     do
     {
         scanf("%d", &a);
@@ -166,18 +183,20 @@ int main()
             enfileirar(a, f);
         }
 
-    }while(a != -1);*/
+    }while(a != -1);
 
-  enfileirar(1, f);
-  enfileirar(2, f);
-  enfileirar(3, f);
-  enfileirar(4, f);
-  enfileirar(5, f);
-  enfileirar(6, f);
-  enfileirar(7, f);
-  enfileirar(8, f);
+    scanf("%d", &a);
 
-  gerenciar_estacionamento(f, 4);
+    /*enfileirar(1, f);
+    enfileirar(2, f);
+    enfileirar(3, f);
+    enfileirar(4, f);
+    enfileirar(5, f);
+    enfileirar(6, f);
+    enfileirar(7, f);
+    enfileirar(8, f);*/
+
+   gerenciar_estacionamento(f, a);
 
     return 0;
 }

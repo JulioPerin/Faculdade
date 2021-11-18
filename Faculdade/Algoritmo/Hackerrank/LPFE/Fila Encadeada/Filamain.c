@@ -133,30 +133,35 @@ int inicio_fila(FilaE *f){
     return aux->item;
 }
 
-int gerenciar_estacionamento(FilaE *f, int a)
+/*int gerenciar_estacionamento(FilaE *f, int a)  // Test case 2 - timeout
 {
-    int cont=0;
+    int cont=0, x;
 
     if(!filaE_vazia(f))
     {
         if(inicio_fila(f) == a)
         {
+            desenfileirar(f);
             imprimir_fila(f);
             printf("\n0\n");
             printf("sucesso");
             return 0;
         }
-
-        while(inicio_fila(f) != a)
+        x = desenfileirar(f);
+        enfileirar(x, f);
+        cont++;
+         while((inicio_fila(f) != a) && (inicio_fila(f) != x))
         {
-                enfileirar(inicio_fila(f), f);
+            x = desenfileirar(f);
+            enfileirar(x, f);
+            cont++;
+            if(inicio_fila(f) == a)
+            {
                 desenfileirar(f);
-                cont++;
+                break;
+            }
         }
-        if(inicio_fila(f) == a)
-        {
-            desenfileirar(f);
-        }
+
     }
     else
     {
@@ -167,6 +172,53 @@ int gerenciar_estacionamento(FilaE *f, int a)
     printf("\n%d\n", cont);
     printf("sucesso");
     return cont;
+
+}*/
+
+int gerenciar_estacionamento(FilaE *f, int a)
+{
+    int x, y;
+    int cont=0;
+
+    if(!filaE_vazia(f))
+    {
+        if(inicio_fila(f) == a)
+        {
+            desenfileirar(f); // nao esquecer que o "carro" encontrado eh removido do estacionamento
+            imprimir_fila(f);
+            printf("\n%d\n", 0);
+            printf("sucesso");
+            return 0;
+        }
+
+        x = desenfileirar(f);
+        enfileirar(x, f);
+        cont++;
+
+        while((inicio_fila(f) != a) && (inicio_fila(f) != x))
+        {
+                y = desenfileirar(f);
+                enfileirar(y, f);
+                cont++;
+        }
+        if(inicio_fila(f) == a)
+        {
+            desenfileirar(f);
+            imprimir_fila(f);
+            printf("\n%d\n", cont);
+            printf("sucesso");
+        }else{
+            imprimir_fila(f);
+            printf("\n%d\n", cont);
+             printf("falha");
+        }
+
+        return cont;
+    }
+    else
+    {
+        return -1;
+    }
 
 }
 
@@ -200,4 +252,3 @@ int main()
 
     return 0;
 }
-

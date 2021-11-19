@@ -19,18 +19,46 @@ e executada. Na proxima linha deve ser impressa a posicao retornada pela funcao.
 Caso a busca sequencial nao tenha sido executada, apenas a posicao retornada pela funcao deve ser impressa.
 */
 
-int busca_bin_sequencial(int key, int n, int v[], int m)
+int busca_bin_sequencial(int key, int tam, int v[], int m)
 {
+    int ini=0, fim=tam-1, meio;
     int i;
 
-
+    while(ini <= fim)
+    {
+        meio = (ini + fim)/2;
+        if(key < v[meio] && meio > m)
+        {
+            fim = meio -1;
+        }
+        else if(key > v[meio] && meio > m)
+        {
+            ini = meio + 1;
+        }
+        else return meio;
+        if(meio <= m)
+        {
+            for (i = 0; i < tam && key < v[i]; i++);
+            {
+                if ((i < tam) && (v[i] == key))
+                {
+                   return i;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+        }
+    }
+    return -1;
 
 
 }
 
 int main()
 {
-    int key = 1, n=16, m=4, i;
+    int key = 1, tam=16, m=4, i;
     int v[16] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
 
     /*scanf("%d", &key);
@@ -42,7 +70,7 @@ int main()
     }
     scanf("%d", &m); */
 
-    busca_bin_sequencial(key, n, v, m);
+    printf("%d", busca_bin_sequencial(key, tam, v, m));
 
     return 0;
 }

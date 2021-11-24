@@ -35,11 +35,11 @@ int busca_bin_sequencial(int key, int tam, int v[], int m)
         {
             ini = meio + 1;
         }
-        else return meio;
         if(meio <= m)
         {
             for (i = 0; i < tam && key < v[i]; i++);
             {
+
                 if ((i < tam) && (v[i] == key))
                 {
                    return i;
@@ -71,6 +71,7 @@ int main()
     scanf("%d", &m); */
 
     printf("%d", busca_bin_sequencial(key, tam, v, m));
+    //busca_bin_sequencial(key, tam, v, m);
 
     return 0;
 }

@@ -2,9 +2,9 @@
 Implemente a funcao que receba quatro parametros: numero inteiro a ser procurado, vetor de inteiros
 (v[] ou *v), tamanho do vetor (n) e um numero inteiro representando tamanho minimo (m). Nessa funcao,
 enquanto o espaco de busca (espaco coberto entre os indices esquerdo e direito em uma busca binaria,
-ou seja, direito - esquerdo + 1) for maior que m, o método de busca binaria deve ser aplicada. Quando
+ou seja, direito - esquerdo + 1) for maior que m, o metodo de busca binaria deve ser aplicada. Quando
 o espaco de busca ficar menor ou igual a m, a busca sequencial devera ser executada. Se a busca sequencial
-for aplicada, o espaco de busca devera ser impresso (caso houver). Ao final a posição do item procurado no
+for aplicada, o espaco de busca devera ser impresso (caso houver). Ao final a posicao do item procurado no
 vetor e retornada. Caso o item nao seja encontrado, a funcao devera retornar -1.
 
 Input Format:
@@ -13,65 +13,102 @@ tamanho do vetor. Na terceira devem ser lidos os elementos do vetor. Na quarta l
 da particao (m) para fazer a busca binaria.
 
 Output Format:
-Na primeira linha deve ser impresso o subvetor referente ao espaço de busca a partir do momento em que a busca sequencial
+Na primeira linha deve ser impresso o subvetor referente ao espaco de busca a partir do momento em que a busca sequencial
 e executada. Na proxima linha deve ser impressa a posicao retornada pela funcao.
 
 Caso a busca sequencial nao tenha sido executada, apenas a posicao retornada pela funcao deve ser impressa.
 */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
 
 int busca_bin_sequencial(int key, int tam, int v[], int m)
 {
     int ini=0, fim=tam-1, meio;
     int i;
 
-    while(ini <= fim)
+    while((ini <= fim) && (fim - ini > m))
     {
         meio = (ini + fim)/2;
-        if(key < v[meio] && meio > m)
+
+        if (v[meio] == key)
         {
-            fim = meio -1;
+            return meio;
         }
-        else if(key > v[meio] && meio > m)
+        else if(key < v[meio])
+        {
+            fim = meio - 1;
+        }
+        else
         {
             ini = meio + 1;
         }
-        if(meio <= m)
-        {
-            for (i = 0; i < tam && key < v[i]; i++);
-            {
-
-                if ((i < tam) && (v[i] == key))
-                {
-                   return i;
-                }
-                else
-                {
-                    return -1;
-                }
-            }
-        }
     }
-    return -1;
 
+    for(i = ini; i <= fim; i++)
+    {
+        printf("%d ", v[i]);
+    }
 
+    printf("\n");
+
+     for(i = ini; (i <= fim) && (key < v[i]); i++)
+     {
+         if ((i < tam) && (v[i] == key))
+            return i;
+        else
+            return -1;
+     }
+
+     if(key > tam)
+     {
+         return -1;
+     }
+     else
+        return 0;
+
+}
+
+int* bubble(int v[], int n){ // caso o vetor nn esteja ordenado
+    int i, j, x, troca = 1;
+
+    for (i = 0; (i < n - 1) && (troca); i++){
+        troca = 0;
+
+        for (j = 0; j < n - i - 1; j++)
+            if (v[j] > v[j + 1]){
+                x = v[j];
+                v[j] = v[j + 1];
+                v[j + 1] = x;
+                troca = 1;
+            }
+    }
+
+    return (int*)v;
 }
 
 int main()
 {
-    int key = 1, tam=16, m=4, i;
-    int v[16] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16};
+    int key, tam, m, i;
+    int *v;
 
-    /*scanf("%d", &key);
+    scanf("%d", &key);
     scanf("%d", &tam);
-    int v[tam];
-    for(i=0; i<=tam; i++;)
+
+    v = (int*)malloc(sizeof(int) * tam);
+
+    for(i=0; i<tam; i++)
     {
         scanf("%d", &v[i]);
+        //v[i] = i + 1;
     }
-    scanf("%d", &m); */
+    scanf("%d", &m);
+
+    bubble(v, tam);
 
     printf("%d", busca_bin_sequencial(key, tam, v, m));
-    //busca_bin_sequencial(key, tam, v, m);
 
     return 0;
 }

@@ -11,8 +11,6 @@ Imprimir o conteudo da lista encadeada ordenada.
 */
 
 #include <stdio.h>
-
-#include <stdio.h>
 #include <stdlib.h>
 
 typedef struct Cell Cell;
@@ -212,32 +210,48 @@ void inverter(ListaE *l)
 
 void bubble(ListaE *l)
 {
-    Cell *aux;
-    Cell *inv = NULL;
+    int i, j, x, troca = 1;
+    Cell *aux1;
+    Cell *aux2;
+    int n = tamanho_LE(l);
 
+    aux1 = l->head;
     if (!listaE_vazia(l))
     {
-        while (l->head > aux->next)
+        for (i = 0; i < (n-1) && troca; i++)
         {
-            if (l->head > aux->next)
-            {
-                aux = l->head;
-                l->head = aux->next;
-                aux->next = inv;
-                inv = aux;
+
+            troca = 0;
+            aux2 = aux1->next;
+            for(j = 0; j < (n - 1 - i); j++){
+
+
+                if (aux1->item > aux2->item){
+                    x = aux1->item;
+                    aux1->item = aux2->item;
+                    aux2->item = x;
+                    troca = 1;
+
+
+                }
+                aux2 = aux2->next;
+
             }
+            aux1 = aux1->next;
+        }
+
     }
 
     imprimir(l);
-    }
 }
+
 
 int main()
 {
     int a;
     ListaE *l = criar_listaE();
 
-    /*do
+    do
     {
         scanf("%d", &a);
         if(a != -1)
@@ -245,21 +259,9 @@ int main()
             inserir_ultimo(a, l);
         }
 
-    }while(a != -1); */
-
-    inserir_ultimo(3, l);
-    inserir_ultimo(8, l);
-    inserir_ultimo(5, l);
-    inserir_ultimo(9, l);
-    inserir_ultimo(1, l);
-    inserir_ultimo(2, l);
-    inserir_ultimo(4, l);
-    inserir_ultimo(6, l);
+    }while(a != -1);
 
     bubble(l);
-
-
-    //imprimir(l);
 
     return 0;
 }
